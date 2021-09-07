@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<style>
+.sqltask{
+    background-color:cornsilk;
+    border-style: dotted;
+}
+</style>
+
+<body>
+    <div class="sqltask">
+    <div>
+    <b>Query for Creating studentDetails:</b><br><br>
+    <b>Creating Table:</b><br>
+    create table studentDetails
+    (
+    id int,
+    reqNo int,
+    studentName Varchar(40),
+    taskCompleted int,
+    queries Varchar(100),
+    attendance float
+    );<br><br></div>
+    <div>
+    <b>Inserting Data:</b><br>
+    insert into studentDetails (id, reqNo, studentName, taskCompleted, queries, attendance)<br>
+    values (1, 353, 'madhan', 6, 'Need assistance on creating class component', 70.22)<br><br>
+
+    insert into studentDetails (id, reqNo, studentName, taskCompleted, queries, attendance)<br>
+    values (2, 351, 'Shanjay', 6, 'When Will the Placement Get Started', 80.22)<br><br>
+
+    insert into studentDetails (id, reqNo, studentName, taskCompleted, queries, attendance)<br>
+    values (3, 354, 'Mohan', 6, 'How to Connect a database from NodeJS', 90.22)<br><br>
+
+    insert into studentDetails (id, reqNo, studentName, taskCompleted, queries, attendance)<br>
+    values (4, 352, 'ManasKumar', 5, 'I cant Fetch Api from Spotify App', 70.22)<br><br>
+
+    insert into studentDetails (id, reqNo, studentName, taskCompleted, queries, attendance)<br>
+    values (5, 355, 'Allirani', 2, 'How to join two tables and query it?', 50.22)<br><br>
+</div>
+<div>
+    <b>Query for Creating studentDetails:</b><br><br>
+
+    <b>Creating Table:</b><br>
+    create table mentorDetails
+    (
+    reqId int,
+    mentorName Varchar(40),
+    reqNo int,
+    queryTitle Varchar(100),
+    status Varchar(40)
+    );
+</div><br>
+<div>
+    <b>Inserting Data:</b><br>
+
+    insert into mentorDetails (reqId, mentorName, reqNo, queryTitle, status)<br>
+    values ( 1, "Akbar", 351, "Placement Query", "assigned" )<br><br>
+
+    insert into mentorDetails (reqId, mentorName, reqNo, queryTitle, status)<br>
+    values ( 2, "Tamil", 352, "Hackathon Query", "assigned" )<br><br>
+
+    insert into mentorDetails (reqId, mentorName, reqNo, queryTitle, status)<br>
+    values ( 3, "Raghav", 353, "Query regarding ReactJS", "assigned" )<br><br>
+
+    insert into mentorDetails (reqId, mentorName, reqNo, queryTitle, status)<br>
+    values ( 4, "Venkat", 354, "Query regarding NodeJS", "assigned" )<br><br>
+
+    insert into mentorDetails (reqId, mentorName, reqNo, queryTitle, status)<br>
+    values ( 5, "Sai mohan", 355, "Query regarding Database", "assigned" )<br><br>
+</div>
+<div>
+    <b>Query for Joining the both tables:</b><br><br>
+
+    select * from mentorDetails
+    inner Join studentDetails
+    on mentorDetails.reqno=studentDetails.reqno;<br><br>
+</div>
+</div>
+</body>
+
+</html>
